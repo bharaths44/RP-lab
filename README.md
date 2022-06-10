@@ -1,1 +1,3 @@
 # shitposting
+
+Just random codes
