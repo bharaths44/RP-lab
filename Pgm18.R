@@ -1,0 +1,7 @@
+a<-c(1:3)
+b<-c(5:7)
+print(a)
+print(b)
+print(a+b)
+print(a*b)
+print(mean(a))
