@@ -1,3 +1,3 @@
-# shitposting
+# RP Lab
 
-Just random codes
+R programming code files
