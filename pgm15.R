@@ -1,8 +1,9 @@
-fib <- numeric(10)
-fib[1] <- fib[2] <- 1
-for (i in 3:10) 
+fibonacci<-c(1:10)
+fibonacci[1]<-1
+fibonacci[2]<-1
+for(i in 3:10)
 {
-  fib[i] <- fib[i - 2] + fib[i - 1]
+  fibonacci[i]<-fibonacci[i-2]+fibonacci[i-1]
 }
-print("First 10 Fibonacci numbers:")
-print(fib)
+print("First 10 fibonacci are :")
+print(fibonacci)

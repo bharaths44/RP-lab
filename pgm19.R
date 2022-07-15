@@ -1,10 +1,7 @@
-date <- as.Date("2022/04/07")
-print ("Original Date")
-print (date)
-n = 3
-new_sub_date <- date - n
-print ("Subtracted Date")
-print (new_sub_date)
-new_add_date <- date + n
-print ("Added Date")
-print (new_add_date)
+date<-as.Date("2002/10/23")
+n=273
+olddate<-date-n
+newdate<-date+n
+print(paste("original date is ",date))
+print(paste("Subtracted date is",olddate))
+print(paste("Added date is ",newdate))

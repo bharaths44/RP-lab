@@ -1,14 +1,12 @@
-print_factors = function(n) 
+factors<-function(x)
 {
-  print(paste("The factors of",n,"are:"))
-  for(i in 1:n) 
+  print(paste("The factors of ",x,"are :"))
+  for(i in 1:x)
   {
-    if((n %% i) == 0) 
+    if(x%%i==0)
     {
       print(i)
     }
   }
 }
-print_factors(4)
-print_factors(7)
-print_factors(12)
+factors(9)

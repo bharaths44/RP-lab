@@ -1,5 +1,5 @@
-
-date_1<-as.Date("2022-04-07")
-date_2<-as.Date("2022-04-19")
-a = seq(from = date_1, to = date_2, by = 'day')
-print(length(a)-1)
+date1<-as.Date("2023-05-07",format="%Y-%m-%d")
+date2<-as.Date("2002-10-23",format="%Y-%m-%d")
+print(paste("Date 1 is ",date1))
+print(paste("Date 2 is ",date2))
+difftime(date1,date2,units = "days")
