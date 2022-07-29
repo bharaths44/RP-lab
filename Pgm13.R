@@ -1,5 +1,0 @@
-a<-c(1:3)
-b<-c(1:3)
-c<-c(1:3)
-m<-matrix(c(a,b,c),ncol=3)
-print(m)
