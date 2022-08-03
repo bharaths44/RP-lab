@@ -8,11 +8,10 @@ print(result)
 
 #3.2
 l1<-list(1,2,3,4,5,6)
-x <-unlist(l1)
 print("The original list is ")
 print(l1)
-for(i in x) x[i]<-x[i]^2
-x
+for(i in l1) l1[i]<-as.integer(l1[i])^2
+l1
 
 #3.3
 x = list(list(1,2), list(13,4), list(5,26))
