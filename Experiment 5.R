@@ -1,8 +1,5 @@
 #5.1
 library(ggplot2)
-library(dplyr)
-library(broom)
-library(plyr)
 tv<-read.csv("tv.csv")
 data(tv)
 relation <- lm(Sales~TV,data=tv)
@@ -11,7 +8,6 @@ ggplot(relation,aes(TV,Sales))+ geom_jitter(aes(TV,Sales),size=1,color="black")+
 
 #5.2
 library(ggplot2)
-library(predict3d)
 jobprof<-read.csv("jobprof.csv")
 data(jobprof)
 model <- lm(y~x1+x2+x3,data=jobprof)

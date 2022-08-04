@@ -7,37 +7,39 @@ print("The reversed list is")
 print(result)
 
 #3.2
-l1<-list(1,2,3,4,5,6)
+list<-list(1,2,3,4)
 print("The original list is ")
-print(l1)
-for(i in l1) l1[i]<-as.integer(l1[i])^2
-l1
+print(list)
+for(i in list) list[i]<-as.integer(list[i])^2
+list
 
 #3.3
-x = list(list(1,2), list(13,4), list(5,26))
+x <- list(list(0,4), list(1,2), list(5,6))
 print("Original nested list:")
 print(x)
-e = lapply(x, '[[', 2)
+sec <- lapply(x, '[[', 2)
 print("Second element of all the nested list:")
-print(e)
+print(sec)
 
 #3.4
-n1 = list(1,2,3,4,5,6)
-c1 = list("A", "B", "C")
+list1 <- list(1,2,3,4)
+list2 <- list("A", "B", "C")
 print("Original lists:")
-print(n1)
-print(c1)
-mlist=c(n1, c1)
+print("List1")
+list1
+print("List2")
+list2
+merge<-c(list1, list2)
 print("New merged list:")
-print(mlist)
+merge
 
 #3.5
-l1<-list(3,6,9)
+list<-list(1,2,3)
 print("The list is :")
-l1
+list
+a<-unlist(list)
 print("The unlisted object is")
-x<-unlist(l1)
-x
+a
 
 #3.6
 data_emp<-data.frame(Name=c("John","Earl","Chris","Joseph","Elliot"),
@@ -80,7 +82,7 @@ data<-data.frame(Name=c("John","Elliot","Chris"),
 print("Original dataframe")
 data
 data<-data[with(data,order(SGPA)),]
-print("Soreted dataframe is :")
+print("Sorted dataframe is :")
 data
 
 #3.11
@@ -89,15 +91,20 @@ data
 print("The max salary is :")
 sal <- max(data$salary)
 print(sal)
+
 print("The Person with max salary is")
 val <- subset(data, salary == max(salary))
 print(val)
+
 print("People in IT department")
 val <- subset( data, dept == "IT")
 print(val)
+
 print("People joined on or after 2014")
-val <- subset(data, as.Date(start_date) > as.Date("2014-01-01"))
+val <- subset(data,as.Date(start_date) > as.Date("2014-01-01"))
 print(val)
+
 write.csv(val,"output.csv")
+print("Output.csv :")
 newdata <- read.csv("output.csv")
 print(newdata)
