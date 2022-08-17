@@ -17,8 +17,8 @@ print(class(c))
 
 #1.3
 a<-c(1:3)
-b<-c(1:3)
-c<-c(1:3)
+b<-c(5:7)
+c<-c(9:11)
 m<-matrix(c(a,b,c),ncol=3)
 print(m)
 
@@ -39,15 +39,29 @@ print("First 10 fibonacci are :")
 print(fibonacci)
 
 #1.6
-fibonacci<-c(1:10)
-fibonacci[1]<-1
-fibonacci[2]<-1
-for(i in 3:10)
+prime_numbers <- function(n) {
+if (n >= 2) 
 {
-  fibonacci[i]<-fibonacci[i-2]+fibonacci[i-1]
+  x = seq(2, n)
+  prime_nums = c()
+  for (i in seq(2, n)) 
+  {
+  if (any(x == i)) 
+  {
+    prime_nums = c(prime_nums, i)
+    x = c(x[(x %% i) != 0], i)
+  }
+ }
+ return(prime_nums)
+ }
+ else 
+ {
+  stop("Number should be at least 2.")
+ }
 }
-print("First 10 fibonacci are :")
-print(fibonacci)
+
+prime_numbers(15)
+
 
 #1.7
 factors<-function(x)
